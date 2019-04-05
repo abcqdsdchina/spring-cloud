@@ -1,5 +1,6 @@
 package club.avence.springcloud;
 
+import com.netflix.loadbalancer.IRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -28,6 +29,11 @@ public class WebApplicationA {
         httpHeaders.set("Authorization",
                 "Basic " + new String(Base64.getEncoder().encode("admin:admin".getBytes(StandardCharsets.US_ASCII))));
         return httpHeaders;
+    }
+
+    @Bean
+    public IRule rule() {
+        return new com.netflix.loadbalancer.RandomRule();
     }
 
     public static void main(String[] args) {

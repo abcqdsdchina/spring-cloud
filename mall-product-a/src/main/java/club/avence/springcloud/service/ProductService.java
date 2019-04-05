@@ -26,6 +26,10 @@ public class ProductService implements IProductService {
 
     @Override
     public List<Product> list() {
-        return Arrays.asList(new Product().setId(1L), new Product().setId(2L), new Product().setId(3L));
+        return Arrays.asList(
+                new Product().setId(1L).setName("ProductA"),
+                new Product().setId(2L).setName("ProductA"),
+                new Product().setId(3L).setName("ProductA")
+        );
     }
 }
