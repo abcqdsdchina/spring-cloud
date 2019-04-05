@@ -16,6 +16,7 @@
         <module>mall-product-b</module>
         <module>mall-web-a</module>
         <module>mall-web-b</module>
+        <module>mall-web-ribbon</module>
     </modules>
 
     <name>spring-cloud</name>

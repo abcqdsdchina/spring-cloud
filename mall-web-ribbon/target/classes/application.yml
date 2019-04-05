@@ -1,0 +1,14 @@
+MALL-PRODUCT:
+  ribbon:
+    listOfServers: http://localhost:8085, http://localhost:8086
+
+ribbon:
+  eureka:
+    enabled: false
+
+server:
+  port: 8092
+
+spring:
+  application:
+    name: mall-web-ribbon
