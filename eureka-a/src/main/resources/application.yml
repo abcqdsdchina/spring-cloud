@@ -1,6 +1,12 @@
 eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
   instance:
     hostname: localhost
+  server:
+    eviction-interval-timer-in-ms: 1000
+    enable-self-preservation: false
 
 server:
   port: 8080
@@ -8,3 +14,7 @@ server:
 spring:
   application:
     name: eureka-a
+  security:
+    user:
+      name: admin
+      password: admin

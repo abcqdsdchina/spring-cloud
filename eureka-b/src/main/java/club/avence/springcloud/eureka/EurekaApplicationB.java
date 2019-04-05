@@ -1,4 +1,4 @@
-package club.avence.springcloud;
+package club.avence.springcloud.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
