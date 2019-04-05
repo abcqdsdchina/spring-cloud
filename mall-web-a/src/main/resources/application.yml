@@ -1,0 +1,5 @@
+application:
+  name: mall-web-a
+
+server:
+  port: 8090

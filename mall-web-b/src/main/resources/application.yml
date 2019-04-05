@@ -1,0 +1,5 @@
+application:
+  name: mall-web-b
+
+server:
+  port: 8091

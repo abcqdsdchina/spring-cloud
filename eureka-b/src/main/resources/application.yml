@@ -1,0 +1,5 @@
+application:
+  name: eureka-b
+
+server:
+  port: 8081

@@ -1,0 +1,5 @@
+application:
+  name: mall-product-a
+
+server:
+  port: 8085
