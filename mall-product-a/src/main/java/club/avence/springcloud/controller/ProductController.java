@@ -2,6 +2,8 @@ package club.avence.springcloud.controller;
 
 import club.avence.springcloud.product.Product;
 import club.avence.springcloud.service.IProductService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +16,7 @@ public class ProductController {
     @Resource
     private IProductService productService;
 
-    @RequestMapping("/products")
+    @GetMapping("/products")
     public List<Product> list() {
         return productService.list();
     }
