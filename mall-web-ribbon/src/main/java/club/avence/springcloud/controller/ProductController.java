@@ -19,7 +19,7 @@ import java.util.List;
 @RestController
 public class ProductController {
 
-    private static final String PRODUCTS_TOPIC = "MALL-PRODUCT";
+    private static final String PRODUCTS_TOPIC = "mall-product";
 
     @Resource
     private RestTemplate restTemplate;

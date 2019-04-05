@@ -1,4 +1,4 @@
-MALL-PRODUCT:
+mall-product:
   ribbon:
     listOfServers: http://localhost:8085, http://localhost:8086
 
