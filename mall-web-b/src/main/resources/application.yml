@@ -1,5 +1,6 @@
-application:
-  name: mall-web-b
-
 server:
   port: 8091
+
+spring:
+  application:
+    name: mall-web-b

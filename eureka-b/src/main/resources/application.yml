@@ -1,9 +1,10 @@
-application:
-  name: eureka-b
-
 eureka:
   instance:
     hostname: localhost
 
 server:
-  port: 8081
+  port: 8082
+
+spring:
+  application:
+    name: eureka-b
