@@ -1,11 +1,10 @@
 package club.avence.springcloud;
 
-import com.netflix.loadbalancer.IRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.client.RestTemplate;
@@ -13,8 +12,9 @@ import org.springframework.web.client.RestTemplate;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
-@EnableDiscoveryClient
-@SpringBootApplication
+@EnableEurekaClient
+@SpringBootApplication(scanBasePackages="club.avence.springcloud")
+@RibbonClient(name="MALL-PRODUCT", configuration=ProductLoadBalanceConfig.class)
 public class WebApplicationB {
 
     @Bean
@@ -29,11 +29,6 @@ public class WebApplicationB {
         httpHeaders.set("Authorization",
                 "Basic " + new String(Base64.getEncoder().encode("admin:admin".getBytes(StandardCharsets.US_ASCII))));
         return httpHeaders;
-    }
-
-    @Bean
-    public IRule rule() {
-        return new com.netflix.loadbalancer.RandomRule();
     }
 
     public static void main(String[] args) {

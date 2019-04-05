@@ -1,6 +1,8 @@
 package club.avence.springcloud.controller;
 
 import club.avence.springcloud.product.Product;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -12,6 +14,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @RestController
 public class ProductController {
 
@@ -23,8 +26,12 @@ public class ProductController {
     @Resource
     private HttpHeaders httpHeaders;
 
+    @Resource
+    private LoadBalancerClient loadBalancerClient;
+
     @RequestMapping("/products")
     public List<Product> list() {
+        log.info("serviceInstance={}", loadBalancerClient.choose("MALL-PRODUCT"));
         return restTemplate.exchange(PRODUCTS_LIST_URL, HttpMethod.GET,
                     new HttpEntity<>(httpHeaders), List.class)
                 .getBody();
