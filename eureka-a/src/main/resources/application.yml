@@ -2,8 +2,10 @@ eureka:
   client:
     fetch-registry: false
     register-with-eureka: false
+    service-url:
+      defaultZone: http://admin:admin@eureka-b:8082/eureka
   instance:
-    hostname: localhost
+    hostname: eureka-a
   server:
     eviction-interval-timer-in-ms: 1000
     enable-self-preservation: false
