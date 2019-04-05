@@ -3,3 +3,11 @@ application:
 
 server:
   port: 8086
+
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:
+        - User

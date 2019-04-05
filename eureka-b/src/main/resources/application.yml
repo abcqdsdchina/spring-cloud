@@ -1,5 +1,9 @@
 application:
   name: eureka-b
 
+eureka:
+  instance:
+    hostname: localhost
+
 server:
   port: 8081
