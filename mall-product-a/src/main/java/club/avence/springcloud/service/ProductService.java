@@ -1,17 +1,22 @@
 package club.avence.springcloud.service;
 
 import club.avence.springcloud.product.Product;
+import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 @Service
 public class ProductService implements IProductService {
+
     @Override
+    @SneakyThrows
     public Product select(Long id) {
-        return null;
+        if (id == 1) {
+            throw new RuntimeException("Oh, my god!");
+        }
+        return new Product().setId(1000L).setName("ProductAwesome");
     }
 
     @Override

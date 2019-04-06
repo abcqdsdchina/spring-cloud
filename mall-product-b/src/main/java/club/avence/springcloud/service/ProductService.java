@@ -10,7 +10,7 @@ import java.util.List;
 public class ProductService implements IProductService {
     @Override
     public Product select(Long id) {
-        return null;
+        return new Product().setId(2000L).setName("SelectProductB");
     }
 
     @Override
