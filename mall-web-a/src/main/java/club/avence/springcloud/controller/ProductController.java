@@ -6,12 +6,11 @@ import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -29,7 +28,7 @@ public class ProductController {
     @Resource
     private LoadBalancerClient loadBalancerClient;
 
-    @RequestMapping("/products")
+    @GetMapping("/products")
     public List<Product> list() {
         log.info("serviceInstance={}", loadBalancerClient.choose("MALL-PRODUCT"));
         return restTemplate.exchange(PRODUCTS_LIST_URL, HttpMethod.GET,

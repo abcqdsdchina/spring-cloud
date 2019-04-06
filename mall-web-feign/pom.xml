@@ -9,22 +9,25 @@
         <groupId>club.avence.springcloud</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <name>mall-support</name>
-    <artifactId>mall-support</artifactId>
+    <name>mall-web-feign</name>
+    <artifactId>mall-web-feign</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>club.avence.springcloud</groupId>
+            <artifactId>mall-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
-
 </project>
