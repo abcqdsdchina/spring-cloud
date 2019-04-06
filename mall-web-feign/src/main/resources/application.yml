@@ -4,6 +4,20 @@ eureka:
     service-url:
       defaultZone: http://admin:admin@eureka-a:8080/eureka, http://admin:admin@eureka-b:8082/eureka
 
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types:
+        - text/html
+        - application/xml
+        - application/json
+      min-request-size: 0
+
+logging:
+  level:
+    club.avence.springcloud: debug
+
 server:
   port: 8093
 
