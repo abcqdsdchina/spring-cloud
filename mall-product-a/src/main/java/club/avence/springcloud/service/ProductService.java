@@ -14,7 +14,7 @@ public class ProductService implements IProductService {
     @SneakyThrows
     public Product select(Long id) {
         if (id == 1) {
-            throw new RuntimeException("Oh, my god!");
+            throw new RuntimeException("Oh, my GOD!");
         }
         return new Product().setId(1000L).setName("ProductAwesome");
     }
@@ -27,6 +27,15 @@ public class ProductService implements IProductService {
     @Override
     public Product save(Product product) {
         return null;
+    }
+
+    @Override
+    @SneakyThrows
+    public Product delete(Long id) {
+        if (id == 1) {
+            throw new RuntimeException("Oh, my GOD!");
+        }
+        return new Product().setId(100001L).setName("ProductDeleteA");
     }
 
     @Override

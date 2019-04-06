@@ -20,6 +20,11 @@ public class ProductController {
         return productService.select(id);
     }
 
+    @GetMapping("/product/delete/{id}")
+    public Product delete(@PathVariable("id") Long id) {
+        return productService.delete(id);
+    }
+
     @GetMapping("/products")
     public List<Product> list() {
         return productService.list();

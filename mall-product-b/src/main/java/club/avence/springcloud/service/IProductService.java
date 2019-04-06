@@ -8,5 +8,6 @@ public interface IProductService {
     Product select(Long id);
     Product post(Product product);
     Product save(Product product);
+    Product delete(Long id);
     List<Product> list();
 }

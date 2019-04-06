@@ -22,6 +22,11 @@ public class ProductController {
         return productRemoteService.get(id);
     }
 
+    @GetMapping("/product/delete/{id}")
+    public Product delete(@PathVariable("id") Long id) {
+        return productRemoteService.delete(id);
+    }
+
     @GetMapping("/products")
     public List<Product> list() {
         return productRemoteService.list();

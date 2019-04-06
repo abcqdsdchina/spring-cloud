@@ -24,6 +24,14 @@ public class ProductService implements IProductService {
     }
 
     @Override
+    public Product delete(Long id) {
+        if (id == 1) {
+            throw new RuntimeException("Oh, my GOD!");
+        }
+        return new Product().setId(200001L).setName("DeleteProductB");
+    }
+
+    @Override
     public List<Product> list() {
         return Arrays.asList(
                 new Product().setId(1L).setName("ProductB"),

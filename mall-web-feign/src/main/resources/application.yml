@@ -13,6 +13,8 @@ feign:
         - application/xml
         - application/json
       min-request-size: 0
+  hystrix:
+    enabled: true
 
 logging:
   level:
