@@ -1,6 +1,7 @@
 package club.avence.springcloud.service;
 
 import club.avence.springcloud.product.Product;
+import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -24,7 +25,9 @@ public class ProductService implements IProductService {
     }
 
     @Override
+    @SneakyThrows
     public Product delete(Long id) {
+        Thread.sleep(10000);
         if (id == 1) {
             throw new RuntimeException("Oh, my GOD!");
         }
