@@ -11,8 +11,10 @@
     <modules>
         <module>eureka-a</module>
         <module>eureka-b</module>
+        <module>hystrix</module>
         <module>mall-product-a</module>
         <module>mall-product-b</module>
+        <module>mall-security</module>
         <module>mall-support</module>
         <module>mall-web-a</module>
         <module>mall-web-b</module>

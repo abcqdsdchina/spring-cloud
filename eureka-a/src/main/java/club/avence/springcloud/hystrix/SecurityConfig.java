@@ -1,4 +1,4 @@
-package club.avence.springcloud.eureka;
+package club.avence.springcloud.hystrix;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

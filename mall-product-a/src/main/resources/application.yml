@@ -16,6 +16,12 @@ info:
     artifact-id: $project.artifactId$
     model-version: $project.modelVersion$
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
 server:
   port: 8085
 
