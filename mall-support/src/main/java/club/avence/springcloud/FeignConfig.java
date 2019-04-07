@@ -1,4 +1,4 @@
-package club.avence.springcloud.product;
+package club.avence.springcloud;
 
 import feign.Logger;
 import feign.auth.BasicAuthRequestInterceptor;

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -27,8 +28,13 @@ public class ProductController {
     }
 
     @GetMapping("/products")
+    @HystrixCommand(fallbackMethod="listFallback")
     public List<Product> list() {
         return productService.list();
+    }
+
+    public List<Product> listFallback() {
+        return Arrays.asList(new Product().setId(0L).setName("PRODUCT-A HYSTRIX FALLBACK"));
     }
 
     @GetMapping("/product/delete/{id}")

@@ -1,5 +1,6 @@
 package club.avence.springcloud.product;
 
+import club.avence.springcloud.FeignConfig;
 import club.avence.springcloud.product.fallback.ProductRemoteServiceFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

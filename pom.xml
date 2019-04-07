@@ -20,6 +20,7 @@
         <module>mall-web-b</module>
         <module>mall-web-feign</module>
         <module>mall-web-ribbon</module>
+        <module>turbine</module>
     </modules>
 
     <name>spring-cloud</name>
