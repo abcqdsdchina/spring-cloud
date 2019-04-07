@@ -21,6 +21,7 @@
         <module>mall-web-feign</module>
         <module>mall-web-ribbon</module>
         <module>turbine</module>
+        <module>zuul</module>
     </modules>
 
     <name>spring-cloud</name>
