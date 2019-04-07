@@ -34,7 +34,7 @@ public class UserController {
     }
 
     public List<User> listFallback() {
-        return Arrays.asList(new User().setId(0L).setName("USER-A HYSTRIX FALLBACK"));
+        return Arrays.asList(new User().setId(0L).setName("USER-B HYSTRIX FALLBACK"));
     }
 
 }

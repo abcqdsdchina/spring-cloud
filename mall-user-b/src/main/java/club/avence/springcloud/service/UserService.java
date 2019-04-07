@@ -13,7 +13,7 @@ public class UserService implements IUserService {
     @Override
     @SneakyThrows
     public User select(Long id) {
-        return new User().setId(1000L).setName("UserAwesome");
+        return new User().setId(1000L).setName("UserBrowse");
     }
 
     @Override
@@ -29,15 +29,15 @@ public class UserService implements IUserService {
     @Override
     @SneakyThrows
     public User delete(Long id) {
-        return new User().setId(100001L).setName("UserDeleteA");
+        return new User().setId(100001L).setName("UserDeleteB");
     }
 
     @Override
     public List<User> list() {
         return Arrays.asList(
-                new User().setId(1L).setName("UserA"),
-                new User().setId(2L).setName("UserA"),
-                new User().setId(3L).setName("UserA")
+                new User().setId(1L).setName("UserB"),
+                new User().setId(2L).setName("UserB"),
+                new User().setId(3L).setName("UserB")
         );
     }
 }
