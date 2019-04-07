@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name="MALL-PRODUCT", configuration=FeignConfig.class, fallbackFactory=ProductRemoteServiceFallbackFactory.class)
+@FeignClient(name="ZUUL", configuration=FeignConfig.class, fallbackFactory=ProductRemoteServiceFallbackFactory.class)
 public interface ProductRemoteService {
 
-    @GetMapping("/product/{id}")
+    @GetMapping("/api/mall-product/product/{id}")
     Product get(@PathVariable("id") Long id);
 
-    @GetMapping("/products")
+    @GetMapping("/api/mall-product/products")
     List<Product> list();
 
-    @GetMapping("/product/delete/{id}")
+    @GetMapping("/api/mall-product/product/delete/{id}")
     Product delete(@PathVariable("id") Long id);
 
 }

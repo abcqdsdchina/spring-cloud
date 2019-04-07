@@ -26,3 +26,5 @@ server:
 spring:
   application:
     name: mall-web-feign
+  main:
+    allow-bean-definition-overriding: true

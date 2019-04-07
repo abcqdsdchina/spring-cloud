@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(name="MALL-USER", configuration= FeignConfig.class)
+@FeignClient(name="ZUUL", configuration=FeignConfig.class)
 public interface UserRemoteService {
 
-    @GetMapping("/users")
+    @GetMapping("/api/mall-user/users")
     List<User> list();
 
 }
