@@ -10,3 +10,16 @@ server:
 spring:
   application:
     name: zuul
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:
+        - User
+
+zuul:
+  ignored-services: "*"
+  prefix: /api
+  routes:
+    mall-user: /mall-user/**
+    mall-product: /mall-product/**

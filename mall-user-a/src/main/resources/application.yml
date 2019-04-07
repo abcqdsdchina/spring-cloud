@@ -28,9 +28,4 @@ server:
 spring:
   application:
     name: mall-user
-  security:
-    user:
-      name: admin
-      password: admin
-      roles:
-        - User
+    
