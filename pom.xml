@@ -17,6 +17,7 @@
         <module>mall-security</module>
         <module>mall-support</module>
         <module>mall-user-a</module>
+        <module>mall-user-b</module>
         <module>mall-web-a</module>
         <module>mall-web-b</module>
         <module>mall-web-feign</module>
