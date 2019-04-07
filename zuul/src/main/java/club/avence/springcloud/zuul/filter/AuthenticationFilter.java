@@ -1,4 +1,4 @@
-package club.avence.springcloud.hystrix.filter;
+package club.avence.springcloud.zuul.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;

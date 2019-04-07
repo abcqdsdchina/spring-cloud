@@ -1,6 +1,6 @@
-package club.avence.springcloud.hystrix;
+package club.avence.springcloud.zuul;
 
-import club.avence.springcloud.hystrix.filter.AuthenticationFilter;
+import club.avence.springcloud.zuul.filter.AuthenticationFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
