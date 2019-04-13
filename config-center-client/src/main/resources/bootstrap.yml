@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      name: config-center-client
+      label: master
+      uri: http://localhost:8076
+      username: admin
+      password: admin

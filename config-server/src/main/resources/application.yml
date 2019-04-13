@@ -1,0 +1,17 @@
+server:
+  port: 8076
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///F:/projects/config-repository
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:
+        - User
