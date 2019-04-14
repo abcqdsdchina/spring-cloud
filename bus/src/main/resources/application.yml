@@ -3,6 +3,15 @@ eureka:
     service-url:
       defaultZone: http://admin:admin@eureka-a:8083/eureka, http://admin:admin@eureka-b:8084/eureka
 
+management:
+  endpoint:
+    bus-refresh:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
 server:
   port: 8074
 
