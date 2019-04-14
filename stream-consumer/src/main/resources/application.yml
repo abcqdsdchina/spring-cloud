@@ -25,9 +25,9 @@ spring:
           group: stream-mq-group
       rabbit:
         bindings:
-          output:
-            producer:
-              routing-key-expression: '''mall-product-key'''
+          input:
+            consumer:
+              binding-routing-key: mall-product-key
   security:
     user:
       name: admin
