@@ -1,0 +1,27 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@eureka-a:8083/eureka, http://admin:admin@eureka-b:8084/eureka
+
+server:
+  port: 8074
+
+spring:
+  application:
+    name: bus
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///F:/projects/config-repository
+  rabbitmq:
+    host: 172.17.0.2
+    port: 5672
+    username: admin
+    password: admin
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:
+        - User
