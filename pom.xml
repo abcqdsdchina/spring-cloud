@@ -28,6 +28,8 @@
         <module>mall-web-b</module>
         <module>mall-web-feign</module>
         <module>mall-web-ribbon</module>
+        <module>stream-producer</module>
+        <module>stream-consumer</module>
         <module>turbine</module>
         <module>zuul</module>
     </modules>

@@ -1,0 +1,36 @@
+server:
+  port: 8072
+
+spring:
+  application:
+    name: stream-consumer
+  cloud:
+    stream:
+      binders:
+        stream-mq:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                addresses: 172.17.0.2
+                port: 5672
+                username: admin
+                password: admin
+                virtual-host: /
+      bindings:
+        input:
+          binder: stream-mq
+          content-type: application/json
+          destination: stream-exchange
+          group: stream-mq-group
+      rabbit:
+        bindings:
+          output:
+            producer:
+              routing-key-expression: '''mall-product-key'''
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:
+        - User
