@@ -1,0 +1,40 @@
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+
+server:
+  port: 8071
+
+spring:
+  application:
+    name: sleuth
+  main:
+    allow-bean-definition-overriding: true
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:
+        - User
+zipkin:
+  collector:
+    sample-rate: 1.0
+    http:
+      enabled: false
+    rabbitmq:
+      addresses: 172.17.0.2:5672
+      password: admin
+      queue: zipkin
+      username: admin
+      virtual-host: /
+  storage:
+    type: mysql
+    mysql:
+      host: localhost
+      port: 3306
+      username: root
+      password: root
+      db: mysql
+

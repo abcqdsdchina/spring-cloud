@@ -34,3 +34,10 @@ spring:
       password: admin
       roles:
         - User
+  zipkin:
+    base-url: http://localhost:8071
+    sender:
+      type: rabbit
+    sleuth:
+      sampler:
+        probability: 1.0

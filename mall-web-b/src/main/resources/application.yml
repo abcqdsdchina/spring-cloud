@@ -10,3 +10,10 @@ server:
 spring:
   application:
     name: mall-web-b
+  zipkin:
+    base-url: http://localhost:8071
+    sender:
+      type: rabbit
+    sleuth:
+      sampler:
+        probability: 1.0
