@@ -1,4 +1,7 @@
 management:
+  health:
+    rabbit:
+      enabled: false
   metrics:
     web:
       server:
