@@ -1,7 +1,4 @@
 management:
-  health:
-    rabbit:
-      enabled: false
   metrics:
     web:
       server:
@@ -15,12 +12,17 @@ spring:
     name: sleuth
   main:
     allow-bean-definition-overriding: true
+  rabbitmq:
+    addresses: 172.17.0.2:5672
+    username: admin
+    password: admin
   security:
     user:
       name: admin
       password: admin
       roles:
         - User
+
 zipkin:
   collector:
     sample-rate: 1.0
