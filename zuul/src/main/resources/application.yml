@@ -10,19 +10,24 @@ server:
 spring:
   application:
     name: zuul
+  rabbitmq:
+    addresses: 172.17.0.2:5672
+    username: admin
+    password: admin
   security:
     user:
       name: admin
       password: admin
       roles:
         - User
+  sleuth:
+    sampler:
+      probability: 1.0
   zipkin:
     base-url: http://localhost:8071
     sender:
-      type: rabbit
-    sleuth:
-      sampler:
-        probability: 1.0
+      type: RABBIT
+
 
 zuul:
   ignored-services: "*"

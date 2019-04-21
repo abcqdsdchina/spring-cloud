@@ -28,11 +28,16 @@ server:
 spring:
   application:
     name: mall-user
+  rabbitmq:
+    addresses: 172.17.0.2:5672
+    username: admin
+    password: admin
+  sleuth:
+    sampler:
+      probability: 1.0
   zipkin:
     base-url: http://localhost:8071
     sender:
       type: rabbit
-    sleuth:
-      sampler:
-        probability: 1.0
+
     
