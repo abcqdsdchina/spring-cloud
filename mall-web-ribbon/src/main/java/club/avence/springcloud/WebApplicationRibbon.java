@@ -9,6 +9,9 @@ import org.springframework.web.client.RestTemplate;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
+/**
+ * @author qian3
+ */
 @SpringBootApplication
 public class WebApplicationRibbon {
 
