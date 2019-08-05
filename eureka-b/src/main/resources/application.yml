@@ -3,9 +3,10 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://admin:admin@eureka-b:8080/eureka
+      defaultZone: http://admin:admin@eureka-a:8080/eureka
   instance:
     hostname: eureka-b
+    instance-id: ${eureka.instance.hostname}:${server.port}
   server:
     eviction-interval-timer-in-ms: 1000
     enable-self-preservation: false
@@ -15,7 +16,7 @@ server:
 
 spring:
   application:
-    name: eureka-b
+    name: eureka
   security:
     user:
       name: admin
