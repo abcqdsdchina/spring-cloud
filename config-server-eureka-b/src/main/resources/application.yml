@@ -4,6 +4,7 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://admin:admin@eureka-a:8083/eureka
+  environment: product
   instance:
     hostname: eureka-b
     instance-id: ${eureka.instance.hostname}:${server.port}

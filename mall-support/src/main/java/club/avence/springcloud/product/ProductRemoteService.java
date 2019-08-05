@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
+/**
+ * @author qian3
+ */
 @FeignClient(name="ZUUL", configuration=FeignConfig.class, fallbackFactory=ProductRemoteServiceFallbackFactory.class)
 public interface ProductRemoteService {
 
