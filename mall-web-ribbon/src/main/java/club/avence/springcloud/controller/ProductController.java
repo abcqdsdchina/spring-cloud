@@ -15,6 +15,9 @@ import javax.annotation.Resource;
 import java.net.URI;
 import java.util.List;
 
+/**
+ * @author qian3
+ */
 @Slf4j
 @RestController
 public class ProductController {
