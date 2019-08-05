@@ -50,8 +50,8 @@
     <repositories>
         <repository>
             <id>central</id>
-            <name>Central</name>
-            <url>http://localhost:8081/repository/central</url>
+            <name>Maven Central</name>
+            <url>https://maven.aliyun.com/repository/central</url>
         </repository>
         <repository>
             <id>spring</id>
@@ -61,9 +61,14 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>public</id>
-            <name>Public Repositories</name>
-            <url>http://localhost:8081/repository/maven-public/</url>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://maven.aliyun.com/repository/central</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring</id>
+            <name>Spring</name>
+            <url>https://maven.aliyun.com/repository/spring</url>
         </pluginRepository>
     </pluginRepositories>
 
