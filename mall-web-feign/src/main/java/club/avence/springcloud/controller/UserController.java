@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
 
+/**
+ * @author qian3
+ */
 @RestController
 public class UserController {
 

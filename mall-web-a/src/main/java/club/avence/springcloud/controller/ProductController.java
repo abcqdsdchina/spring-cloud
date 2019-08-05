@@ -13,6 +13,9 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.Resource;
 import java.util.List;
 
+/**
+ * @author qian3
+ */
 @Slf4j
 @RestController
 public class ProductController {
