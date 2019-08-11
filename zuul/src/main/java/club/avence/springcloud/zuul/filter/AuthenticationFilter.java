@@ -8,6 +8,9 @@ import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
+/**
+ * @author qian3
+ */
 public class AuthenticationFilter extends ZuulFilter {
 
     @Override

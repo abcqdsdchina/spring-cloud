@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author qian3
+ */
 @RestController
 public class ProductController {
 
@@ -34,7 +37,7 @@ public class ProductController {
     }
 
     public List<Product> listFallback() {
-        return Arrays.asList(new Product().setId(0L).setName("PRODUCT-A HYSTRIX FALLBACK"));
+        return Collections.singletonList(new Product().setId(0L).setName("PRODUCT-A HYSTRIX FALLBACK"));
     }
 
     @GetMapping("/product/delete/{id}")

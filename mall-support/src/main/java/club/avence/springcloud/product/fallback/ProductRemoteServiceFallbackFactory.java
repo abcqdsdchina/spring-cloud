@@ -5,9 +5,12 @@ import club.avence.springcloud.product.ProductRemoteService;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author qian3
+ */
 @Component
 public class ProductRemoteServiceFallbackFactory implements FallbackFactory<ProductRemoteService> {
     @Override
@@ -20,7 +23,7 @@ public class ProductRemoteServiceFallbackFactory implements FallbackFactory<Prod
 
             @Override
             public List<Product> list() {
-                return Arrays.asList(new Product().setId(0L).setName("Hystrix 熔断！"));
+                return Collections.singletonList(new Product().setId(0L).setName("Hystrix 熔断！"));
             }
 
             @Override

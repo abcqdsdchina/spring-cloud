@@ -5,6 +5,9 @@ import feign.auth.BasicAuthRequestInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author qian3
+ */
 @Configuration
 public class FeignConfig {
 
