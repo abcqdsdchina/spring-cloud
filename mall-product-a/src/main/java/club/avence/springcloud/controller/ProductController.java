@@ -27,7 +27,7 @@ public class ProductController {
     }
 
     public Product getFallback(Long id) {
-        return new Product().setId(0L).setName("Hystrix 降级产品");
+        return new Product().setId(id).setName("Hystrix 降级产品");
     }
 
     @GetMapping("/products")

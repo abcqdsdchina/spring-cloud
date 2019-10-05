@@ -1,4 +1,4 @@
-package club.avence.springcloud.zuul.fallback;
+package club.avence.springcloud.gateway.fallback;
 
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.http.HttpHeaders;

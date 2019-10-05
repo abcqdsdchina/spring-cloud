@@ -1,35 +1,30 @@
+debug: false
+
 eureka:
   client:
+    register-with-eureka: true
     service-url:
       defaultZone: http://admin:admin@eureka-a:8080/eureka, http://admin:admin@eureka-b:8082/eureka
-  instance:
-    lease-expiration-duration-in-seconds: 5
-    lease-renewal-interval-in-seconds: 2
-    prefer-ip-address: true
-
-info:
-  app:
-    name: mall-product-a
-  company:
-    name: avence.club
-  build:
-    artifact-id: $project.artifactId$
-    model-version: $project.modelVersion$
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
 
 server:
-  port: 8086
+  port: 8077
   servlet:
     context-path: /
 
 spring:
   application:
-    name: mall-product
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+          predicates:
+          - Path='/' + serviceId + '/**'
+          filters:
+          - RewritePath='/' + serviceId + '/(?<remaining>.*)', "/${remaining}"
+          - AddRequestHeader="Authorization", "Basic YWRtaW46YWRtaW4="
   rabbitmq:
     addresses: 172.17.0.2:5672
     username: admin
@@ -46,4 +41,4 @@ spring:
   zipkin:
     base-url: http://localhost:8071
     sender:
-      type: rabbit
+      type: RABBIT
