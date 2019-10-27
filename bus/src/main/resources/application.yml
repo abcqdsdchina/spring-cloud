@@ -22,7 +22,7 @@ spring:
     config:
       server:
         git:
-          uri: file:///F:/projects/config-repository
+          uri: file:///D:/projects/config-repository
   rabbitmq:
     host: 172.17.0.2
     port: 5672
