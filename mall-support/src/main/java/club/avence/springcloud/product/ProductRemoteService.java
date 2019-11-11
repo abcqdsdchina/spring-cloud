@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @author qian3
  */
-@FeignClient(name="ZUUL", configuration=FeignConfig.class, fallbackFactory=ProductRemoteServiceFallbackFactory.class)
+@FeignClient(name="GATEWAY", configuration=FeignConfig.class, fallbackFactory=ProductRemoteServiceFallbackFactory.class)
 public interface ProductRemoteService {
 
     @GetMapping("/api/mall-product/product/{id}")
