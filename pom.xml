@@ -29,6 +29,7 @@
         <module>mall-web-b</module>
         <module>mall-web-feign</module>
         <module>mall-web-ribbon</module>
+        <module>oauth2-server</module>
         <module>sleuth</module>
         <module>stream-producer</module>
         <module>stream-consumer</module>
