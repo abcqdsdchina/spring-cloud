@@ -7,6 +7,7 @@ import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
 import com.alibaba.csp.sentinel.util.TimeUtil;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class FlowQpsTest {
     private static int seconds = 60 + 40;
 
     @Test
+    @Ignore
     public void test() throws Exception {
         initFlowQpsRule();
 

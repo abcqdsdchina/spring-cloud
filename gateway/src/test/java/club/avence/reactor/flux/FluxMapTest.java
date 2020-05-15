@@ -8,7 +8,6 @@ public class FluxMapTest {
     @Test
     public void test() {
         Flux.just("tom", "jack", "allen")
-                .filter(s -> s.length() > 3)
                 .map(s -> s.concat("@qq.com"))
                 .subscribe(System.out::println);
     }
