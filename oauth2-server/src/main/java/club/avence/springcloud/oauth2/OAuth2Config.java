@@ -1,6 +1,7 @@
 package club.avence.springcloud.oauth2;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
@@ -19,7 +20,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
                 .withClient("demoApp")
-                .secret("demoAppSecret")
+                .secret("{bcrypt}" + new BCryptPasswordEncoder().encode("demoAppSecret"))
                 .authorizedGrantTypes("client_credentials", "password", "refresh_token")
                 .scopes("all")
                 .resourceIds("oauth2-resource")
