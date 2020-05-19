@@ -4,9 +4,6 @@ eureka:
       defaultZone: http://admin:admin@eureka-a:8080/eureka, http://admin:admin@eureka-b:8082/eureka
 
 management:
-  endpoint:
-    bus-refresh:
-      enabled: true
   endpoints:
     web:
       exposure:
@@ -17,17 +14,7 @@ server:
 
 spring:
   application:
-    name: bus
-  cloud:
-    config:
-      server:
-        git:
-          uri: file:///D:/projects/config-repository
-  rabbitmq:
-    host: 172.17.0.2
-    port: 5672
-    username: admin
-    password: admin
+    name: oauth2-server
   security:
     user:
       name: admin
