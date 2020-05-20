@@ -20,20 +20,6 @@ import java.util.Base64;
 public class WebApplicationA {
 
     @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
-
-    @Bean
-    public HttpHeaders httpHeaders() {
-        HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.set("Authorization",
-                "Basic " + new String(Base64.getEncoder().encode("admin:admin".getBytes(StandardCharsets.US_ASCII))));
-        return httpHeaders;
-    }
-
-    @Bean
     public IRule rule() {
         return new com.netflix.loadbalancer.RandomRule();
     }

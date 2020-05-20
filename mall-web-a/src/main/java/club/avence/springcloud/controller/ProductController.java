@@ -26,16 +26,13 @@ public class ProductController {
     private RestTemplate restTemplate;
 
     @Resource
-    private HttpHeaders httpHeaders;
-
-    @Resource
     private LoadBalancerClient loadBalancerClient;
 
     @GetMapping("/products")
     public List<Product> list() {
         log.info("serviceInstance={}", loadBalancerClient.choose("MALL-PRODUCT"));
         return restTemplate.exchange(PRODUCTS_LIST_URL, HttpMethod.GET,
-                    new HttpEntity<>(httpHeaders), List.class)
+                    new HttpEntity<>(""), List.class)
                 .getBody();
     }
 

@@ -7,6 +7,14 @@ eureka:
 server:
   port: 8090
 
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8074/oauth/token
+      client-id: productApp
+      client-secret: aa3sd#gk
+      grant-type: client_credentials
+
 spring:
   application:
     name: mall-web-a
@@ -14,6 +22,12 @@ spring:
     addresses: 172.17.0.2:5672
     username: admin
     password: admin
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:
+        - User
   sleuth:
     sampler:
       probability: 1.0
@@ -21,4 +35,3 @@ spring:
     base-url: http://localhost:8071
     sender:
       type: rabbit
-
