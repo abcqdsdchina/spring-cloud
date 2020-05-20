@@ -25,6 +25,14 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
                 .scopes("all")
                 .resourceIds("oauth2-resource")
                 .accessTokenValiditySeconds(1200)
+                .refreshTokenValiditySeconds(50000)
+                .and()
+                .withClient("productApp")
+                .secret("{bcrypt}" + new BCryptPasswordEncoder().encode("aa3sd#gk"))
+                .authorizedGrantTypes("client_credentials")
+                .scopes("all")
+                .resourceIds("oauth2-resource")
+                .accessTokenValiditySeconds(1200)
                 .refreshTokenValiditySeconds(50000);
     }
 

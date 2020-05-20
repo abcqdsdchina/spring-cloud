@@ -24,6 +24,9 @@ management:
 
 security:
   oauth2:
+    client:
+      client-id: productApp
+      client-secret: aa3sd#gk
     resource:
       token-info-uri: http://localhost:8074/oauth/check_token
 

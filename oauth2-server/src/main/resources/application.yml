@@ -17,7 +17,7 @@ spring:
     name: oauth2-server
   security:
     user:
-      name: admin
-      password: admin
+      name: productApp
+      password: aa3sd#gk
       roles:
         - User
