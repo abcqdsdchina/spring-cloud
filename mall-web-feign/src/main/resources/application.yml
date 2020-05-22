@@ -20,6 +20,14 @@ logging:
   level:
     club.avence.springcloud: debug
 
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8074/oauth/token
+      client-id: productApp
+      client-secret: aa3sd#gk
+      grant-type: client_credentials
+
 server:
   port: 8093
 
@@ -28,3 +36,9 @@ spring:
     name: mall-web-feign
   main:
     allow-bean-definition-overriding: true
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:
+        - User

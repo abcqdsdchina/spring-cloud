@@ -24,7 +24,6 @@ spring:
           - Path='/' + serviceId + '/**'
           filters:
           - RewritePath='/' + serviceId + '/(?<remaining>.*)', "/${remaining}"
-          - AddRequestHeader="Authorization", "Basic YWRtaW46YWRtaW4="
     sentinel:
       datasource:
         ds:
@@ -39,12 +38,6 @@ spring:
     addresses: 172.17.0.2:5672
     username: admin
     password: admin
-  security:
-    user:
-      name: admin
-      password: admin
-      roles:
-        - User
   sleuth:
     sampler:
       probability: 1.0

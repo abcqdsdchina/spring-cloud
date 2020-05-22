@@ -12,11 +12,6 @@ import org.springframework.context.annotation.Configuration;
 public class FeignConfig {
 
     @Bean
-    public BasicAuthRequestInterceptor authRequestInterceptor() {
-        return new BasicAuthRequestInterceptor("admin", "admin");
-    }
-
-    @Bean
     public Logger.Level loggerLevel() {
         return Logger.Level.FULL;
     }
