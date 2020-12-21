@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigController {
 
-    @Value("${spring.application.name}")
+    // @Value("${spring.application.name}")
     private String applicationName;
 
     @GetMapping("/spring/application/name")
